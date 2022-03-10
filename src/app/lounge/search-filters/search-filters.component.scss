@@ -1,0 +1,74 @@
+@import 'var&mixin.scss';
+
+main{
+    @include main-filters-settings;
+
+    form{
+        @include form-filters-settings;
+
+        font-size: 1.27em;
+
+        div{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            label{
+                margin-right: 5px;
+            }
+
+            input{
+                width: 60%;
+                height: 25px;
+                border-radius: 5px;
+                border: 1px solid transparent;
+            }
+
+            select{
+                height: 25px;
+                border-radius: 5px;
+                border: 0;
+                border: 1px solid transparent;
+                font-size: 0.8em;
+
+                &:hover{
+                    cursor: pointer;
+                }
+                
+            }
+        }
+    }
+
+    
+    @include responsive(tablet){
+        font-size: 75.5%;
+    }
+
+    @include responsive (mobile) {
+        font-size: 69.5%;
+
+        
+        main{
+            width: 70%;
+            height: 150px;
+        }
+
+        form{
+            width: 100%;
+            flex-wrap: wrap;
+
+        }
+
+        div input{
+            width: 100%;
+        }
+
+        .label_genre{
+            width: 65%;
+            margin-top: 10px;
+
+        }
+    
+     }
+
+}

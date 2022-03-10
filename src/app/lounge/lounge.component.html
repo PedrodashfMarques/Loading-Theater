@@ -1,0 +1,20 @@
+<app-search-filters *ngIf="!isLoading"></app-search-filters>
+
+<main>
+    <div *ngIf="isLoading" class="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+        <section *ngIf="!isLoading">
+            <article *ngFor="let cadaFilme of todosOsFilmes; index as posicao" [@loungeMovies]>
+                <img       
+                 src="{{cadaFilme.image}}" 
+                 alt="{{cadaFilme.title}}" 
+                 title="{{cadaFilme.title}}"
+                 routerLink="/movie/id/{{cadaFilme.id}}">
+            </article>
+        </section>
+
+</main>

@@ -1,0 +1,51 @@
+<main> 
+
+    <section>
+        <h1 *ngIf="!isLoading">
+            Login
+        </h1>
+        
+        <div *ngIf="isLoading" class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <form *ngIf="!isLoading">
+            <h3>
+                Email
+            </h3>
+
+            <div>
+                <label for="userEmail">
+                    <input
+                    id="userEmail"
+                    type="email"
+                    value="alguem@gmail.com"
+                    #emailRef>
+                </label>
+            </div>
+
+            <h3>
+                Password
+            </h3>
+            
+            <div>
+                <label for="userPassword">
+                    <input
+                    id="userPassword"
+                    type="password"
+                    value="123456"
+                    #passwordRef>
+                </label>
+            </div>
+
+            <button (click)="onLogin()">
+                Login
+            </button>
+
+        </form>
+
+    </section>
+</main>

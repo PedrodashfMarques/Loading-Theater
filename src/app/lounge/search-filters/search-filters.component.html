@@ -1,0 +1,31 @@
+<main>
+
+    <form>
+        <div>
+            <label for="movietle"> Search: </label>
+            <input
+             id="movietle"
+             type="text" 
+             (keyup)="pesquisarFilme()" 
+             #movieTitle>     
+        </div>
+
+        <div class="label_genre">
+            
+            <label for="movieGre"> Genre: </label>
+             <select id="movieGre" (change)="pesquisarFilme()" #movieGenre>
+                <option value=""> All </option>
+                 <option value="action"> Action</option>
+                 <option value="adventure"> Adventure</option>
+                 <option value="horror"> Horror</option>
+                 <option value="thriller"> Thriller</option>
+                 <option value="Science-Fiction"> Science-Fiction</option>
+                 <option value="comedy"> Comedy </option>
+                 <option value="drama"> Drama </option>
+                 <option value="romance"> Romance </option>
+                 <option value="animation"> Animation </option>
+             </select>
+
+        </div>
+    </form>
+</main>
